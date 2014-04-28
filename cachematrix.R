@@ -59,7 +59,7 @@ cacheSolve <- function (x, ...) {       ## First, we take an argument: "x".
         }                       ## value.
         
         data <- x$get ()        ## And if we have not calculated it beforehand, 
-        m <- solve (data, ...)  ## we do it now.
-        x$setinverse (m)
+        m <- solve (data, ...)  ## we do it now and stores the value to be able
+        x$setinverse (m)        ## to cache it next time.
         m
 }
